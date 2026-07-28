@@ -1,0 +1,7 @@
+# Load built-in Neovim globals (vim, jit, etc.)
+std = "neovim"
+
+[globals]
+# Force selene to recognize these objects globally
+vim = { any = true }
+hl = { any = true }

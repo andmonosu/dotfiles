@@ -1,0 +1,15 @@
+gui:
+  # Diseño limpio con bordes simples para que encaje con Hyprland
+  border: "single"
+  theme:
+    # Forzamos tu Naranja Primario en los bordes activos
+    activeBorderColor:
+      - "#FF8A00"
+      - "bold"
+    inactiveBorderColor:
+      - "#5C5C66"
+    searchingActiveBorderColor:
+      - "#FFB86C"
+      - "bold"
+git:
+  parseEmoji: true
