@@ -14,5 +14,7 @@
     ./btop.nix
     ./eza.nix
     ./fzf.nix
+    ./obs.nix
+    ./obsidian.nix
   ];
 }
