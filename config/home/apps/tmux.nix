@@ -71,7 +71,7 @@
       # ============================================================
       bind g run-shell 'tmux select-window -t lazygit 2>/dev/null || tmux new-window -n lazygit -c "#{pane_current_path}" lazygit'
       bind D run-shell 'tmux select-window -t lazydocker 2>/dev/null || tmux new-window -n lazydocker -c "#{pane_current_path}" lazydocker'
-
+      bind P run-shell 'tmux select-window -t posting 2>/dev/null || tmux new-window -n posting -c "#{pane_current_path}" "posting"'
       # ============================================================
       #  Recargar config
       # ============================================================

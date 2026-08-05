@@ -12,5 +12,6 @@
     curl
     fastfetch
     fd
+    posting
   ];
 }
