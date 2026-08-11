@@ -2,6 +2,8 @@
 ---- LOOK AND FEEL (THEME) ----
 ---------------------------
 
+local colors = require("colors")
+
 hl.config({
 	general = {
 		gaps_in = 5,
@@ -9,8 +11,8 @@ hl.config({
 		border_size = 2,
 
 		-- Bordes basados en tu paleta Gris-Naranja
-		["col.active_border"] = "rgba(FF8A00FF)", -- Naranja vibrante para la ventana activa
-		["col.inactive_border"] = "rgba(242428FF)", -- Gris oscuro (Surface Variant) para inactivas
+		["col.active_border"] = colors.primary, -- Naranja vibrante para la ventana activa
+		["col.inactive_border"] = colors.secondary, -- Gris oscuro (Surface Variant) para inactivas
 
 		resize_on_border = false,
 		allow_tearing = false,
@@ -27,7 +29,7 @@ hl.config({
 			enabled = true,
 			range = 12, -- Sombra ligeramente más amplia para dar profundidad de diseño Material
 			render_power = 3,
-			color = "rgba(0E0E1066)",
+			color = colors.tertiary,
 		},
 
 		-- Configuración optimizada para la filosofía Blur del sistema

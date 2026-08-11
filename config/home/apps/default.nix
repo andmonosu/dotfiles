@@ -5,7 +5,6 @@
     ./zsh.nix
     ./firefox.nix
     ./vesktop.nix
-    ./spicetify.nix
     ./lazygit.nix
     ./fastfetch.nix
     ./gh.nix
@@ -16,5 +15,7 @@
     ./fzf.nix
     ./obs.nix
     ./obsidian.nix
+    ./gtk.nix
+    ./spicetify.nix
   ];
 }

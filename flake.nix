@@ -15,6 +15,9 @@
       url = "github:OwlfaceGames/melangey_tmux";
       flake = false; # Indica que es un repositorio de código normal
     };
+    matugen = {
+      url = "github:/InioX/Matugen";
+    };
   };
 
   outputs =

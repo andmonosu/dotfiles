@@ -76,15 +76,6 @@
       #  Recargar config
       # ============================================================
       bind r source-file ~/.config/tmux/tmux.conf \; display-message "tmux.conf recargado"
-
-      # ============================================================
-      #  Tema por defecto (Melangey Tmux)
-      # ============================================================
-      # Seteamos la variable que los submódulos del tema necesitan
-      set -g @melangey_path "~/.config/tmux/themes/melangey"
-
-      # Cargamos el archivo de configuración estático, saltándonos el script de Bash roto
-      source-file ~/.config/tmux/themes/melangey/melangey-tmux.conf
     '';
   };
 }

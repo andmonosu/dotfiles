@@ -3,7 +3,8 @@
 -------------------
 
 hl.on("hyprland.start", function()
-	hl.exec_cmd("swaybg -i /home/andreu/Wallpapers/background.png")
+	hl.exec_cmd("awww-daemon")
+	hl.exec_cmd("sleep 0.5 && restore-wallpaper")
 	hl.exec_cmd("hyprctl setcursor Adwaita 24")
 
 	hl.exec_cmd("dbus-update-activation-environment --systemd --all")

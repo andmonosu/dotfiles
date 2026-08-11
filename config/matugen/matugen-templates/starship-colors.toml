@@ -1,0 +1,54 @@
+format = """
+╭─ $os$directory$git_branch$git_status
+╰─$character"""
+add_newline = true
+palette = 'colors'
+
+[palettes.colors]
+color1 = '{{colors.primary.default.hex}}'
+color2 = '{{colors.primary_fixed_dim.default.hex}}'
+color3 = '{{colors.tertiary.default.hex}}'
+color4 = '{{colors.error.default.hex}}'
+
+[os]
+disabled = false
+style = "bold color1"
+
+[os.symbols]
+NixOS = " "
+Arch = "󰣇 "
+Ubuntu = "󰕈 "
+Debian = "󰣚 "
+Linux = "󰌽 "
+
+[directory]
+style = "bold color2"
+truncation_length = 3
+truncation_symbol = "…/"
+format = "$path "
+
+[git_branch]
+symbol = " "
+style = "bold color1"
+format = "on $symbol$branch "
+
+[git_status]
+style = "bold color3"
+format = '([\[$all_status$ahead_behind\]]($style) )'
+
+untracked = "${count} "
+staged = "${count} "
+modified = "${count} "
+deleted = "󰆴${count} "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+conflicted = "🏳 "
+stashed = "📦 "
+
+
+
+
+[character]
+success_symbol = "❯ "
+error_symbol = "❯ "

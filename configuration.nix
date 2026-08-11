@@ -1,4 +1,5 @@
 {
+  config,
   lib,
   pkgs,
   inputs,
@@ -14,7 +15,9 @@
     kernelModules = [
       "i2c-dev"
       "i2c-piix4"
+      "evdi"
     ];
+    extraModulePackages = [ config.boot.kernelPackages.evdi ];
   };
 
   networking = {
@@ -32,6 +35,14 @@
       pulse.enable = true;
     };
     hardware.openrgb.enable = true;
+    #udev = {
+    #  packages = [ lianli-linux ]; # trae packaging/udev/99-lianli.rules
+    #  extraRules = ''
+    #    # SUBSYSTEM=="hidraw", ATTRS{idVendor}=="0cf2", ATTRS{idProduct}=="a100", MODE="0666", GROUP="users"
+    # ^ ya cubierta por lianli-linux (99-lianli.rules), la dejo comentada
+    #    # por si la necesitas para otro dispositivo; bórrala si no.
+    #  '';
+    #};
   };
 
   hardware = {
@@ -45,6 +56,16 @@
       ];
     };
     amdgpu.opencl.enable = true;
+  };
+
+  virtualisation.libvirtd = {
+    enable = true;
+
+    qemu = {
+      package = pkgs.qemu_kvm;
+      runAsRoot = true;
+      swtpm.enable = true;
+    };
   };
 
   programs = {
@@ -61,6 +82,15 @@
     gamescope = {
       enable = true;
       capSysNice = true;
+    };
+    coolercontrol = {
+      enable = true;
+    };
+    virt-manager = {
+      enable = true;
+    };
+    dconf = {
+      enable = true;
     };
   };
 
@@ -81,6 +111,7 @@
       swaybg
       quickshell
       openrgb-with-all-plugins
+      adwsteamgtk
     ];
 
     variables = {
@@ -116,6 +147,8 @@
       "input"
       "plugdev"
       "i2c"
+      "libvirtd"
+      "kvm"
     ];
     packages = with pkgs; [ tree ];
     shell = pkgs.zsh;

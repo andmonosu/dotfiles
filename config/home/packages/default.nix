@@ -4,5 +4,6 @@
     ./tools.nix
     ./gaming.nix
     ./ia.nix
+    ./wallpaper.nix
   ];
 }

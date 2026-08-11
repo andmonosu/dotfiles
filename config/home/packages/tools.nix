@@ -1,4 +1,4 @@
-{ pkgs, ... }: {
+{ pkgs, inputs, ... }: {
   home.packages = with pkgs; [
     nvtopPackages.amd
     vulkan-tools
@@ -13,5 +13,9 @@
     fastfetch
     fd
     posting
+    nautilus
+    yazi
+    inputs.matugen.packages.${system}.default
+    awww
   ];
 }
