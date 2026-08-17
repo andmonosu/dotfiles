@@ -4,6 +4,11 @@
 set = true
 command = "awww img --transition-type center {{ image }}"
 
+[templates.btop]
+input_path = './matugen-templates/btop.theme'
+output_path = '~/.config/btop/themes/matugen.theme'
+post_hook = 'pkill -USR2 btop || true'
+
 [templates.firefox-website-colors]
  input_path = "./matugen-templates/firefox-colors.css"
  output_path = "~/.config/mozilla/firefox/default/chrome/colors.css"
@@ -54,7 +59,7 @@ output_path = '~/dotfiles/config/quickshell-dotfiles/themes/colors.json'
  
 [templates.spotify]
 input_path = './matugen-templates/spicetify.ini'
-output_path = '~/dotfiles/config/spicetify/Themes/Sleek/color.ini'
+output_path = '~/.config/spicetify/Themes/Sleek/color.ini'
 post_hook = 'pgrep -x spicetify > /dev/null || spicetify apply -n'
 
 [templates.starship]

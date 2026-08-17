@@ -1,4 +1,5 @@
-{ pkgs, inputs, ... }: {
+{ pkgs, inputs, ... }:
+{
   home.packages = with pkgs; [
     nvtopPackages.amd
     vulkan-tools
@@ -17,5 +18,7 @@
     yazi
     inputs.matugen.packages.${system}.default
     awww
+    spotify
+    spicetify-cli
   ];
 }

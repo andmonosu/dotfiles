@@ -9,7 +9,6 @@
     hyprland.url = "github:hyprwm/Hyprland/v0.55.0";
     spicetify-nix = {
       url = "github:Gerg-L/spicetify-nix";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     melangey-tmux = {
       url = "github:OwlfaceGames/melangey_tmux";

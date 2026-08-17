@@ -16,6 +16,5 @@
     ./obs.nix
     ./obsidian.nix
     ./gtk.nix
-    ./spicetify.nix
   ];
 }

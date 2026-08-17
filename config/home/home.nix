@@ -15,7 +15,6 @@ let
     quickshell = "quickshell-dotfiles";
     selene = "selene";
     matugen = "matugen";
-    spicetify = "spicetify";
   };
 
   #lianli-linux = pkgs.callPackage ./packages/custom/lianli.nix { };
