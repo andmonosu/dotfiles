@@ -1,5 +1,5 @@
 return {
-    image = "/home/andreu/Downloads/1325984.jpeg",
+    image = "/home/andreu/Descargas/1325984.jpeg",
 
     background = "0xff1a110f",
 
